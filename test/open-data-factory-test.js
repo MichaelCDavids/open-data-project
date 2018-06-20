@@ -1,29 +1,5 @@
-describe('',function(){
-  it('should',function(){
-
-  });
-});
-
-describe('',function(){
-  it('should',function(){
-
-  });
-});
-
-describe('',function(){
-  it('should',function(){
-
-  });
-});
-
-describe('',function(){
-  it('should',function(){
-
-  });
-});
-
-describe('',function(){
-  it('should',function(){
+describe('The search Function',function(){
+  it('should find people who match the search criteria',function(){
 
   });
 });

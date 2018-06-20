@@ -17,10 +17,27 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
+
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
+
+
+  <!-- Handlebars Template
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -33,11 +50,78 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+      <div class="twelve columns">
+        <h1>H'Squared</h1>
+        <h6>We help homeless people help themselves</h6>
+        <div class="row search-area">
+          <select class="location" name="location">
+             <option value="">Location</option>
+             <option value="">Malmesbury</option>
+             <option value="">Boland</option>
+             <option value="">Woodstock</option>
+             <option value="">Mowbray</option>
+             <option value="">Green Point</option>
+             <option value="">Retreat</option>
+             <option value="">Claremont</option>
+             <option value="">Kalk Bay</option>
+             <option value="">Elsies River</option>
+             <option value="">Lansdowne</option>
+             <option value="">Distric Six</option>
+             <option value="">Wynberg</option>
+             <option value="">Kensington</option>
+             <option value="">Kraaifontein</option>
+             <option value="">Paarl</option>
+             <option value="">Worcester</option>
+             <option value="">Goerge</option>
+             <option value="">Simon's Town</option>
+          </select>
+          <select class="age" name="age">
+             <option value="0">Age</option>
+             <option value="">Under 18</option>
+             <option value="">Between 18 - 25</option>
+             <option value="">Between 26 - 35</option>
+             <option value="">Between 36 - 45 </option>
+             <option value="">Between 46 - 55</option>
+             <option value="">Between 56 - 65</option>
+             <option value="">66+</option>
+          </select>
+          <select class="gender" name="gender">
+           <option value="">Gender</option>
+           <option value="male">Male</option>
+           <option value="female">Female</option>
+          </select>
+          <button id="search-button" type="button" name="search" >Search</button>
+        </div>
       </div>
+   </div>
+   <div class="row">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d105903.7892383617!2d18.53818270228879!3d-33.954155286327385!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1529418984767" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+   </div>
+    <div class="row">
+       <div class="eight columns">
+          <button type="button" class="button" name="button">Statistics</button>
+          <button type="button" class="button" name="button">Donate</button>
+          <button type="button" class="button" name="button">Volunteer</button>
+          <button type="button" class="button" name="button">Job Seekers</button>
+       </div>
+       <div class="four columns">
+          <h3>Brief Description</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+       </div>
     </div>
+    <footer>
+      <div class="row">
+         <div class="four columns">
+            <h5>Contact</h5>
+            <p>info@hsquared.com</p>
+         </div>
+         <div class="four columns">
+            <h5>Call</h5>
+            <p>T: 021-123-4567</p>
+            <p>F: 021-123-4568</p>
+         </div>
+      </div>
+   </footer>
   </div>
 
 <!-- End Document
