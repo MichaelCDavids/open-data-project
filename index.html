@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="materialize/css/materialize.css">
   <link rel="stylesheet" href="materialize/css/materialize.min.css">
 
+
   <!-- Handlebars Template
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
@@ -70,30 +71,134 @@
     </div>
     <div class="infographic">
 
+
+    </div>
+
+    <div class="stats">
+      <script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+animationEnabled: true,
+title: {
+  text: "Activities of homeless people in the Western Cape"
+},
+data: [{
+  type: "pie",
+  startAngle: 240,
+  yValueFormatString: "##0.00\"%\"",
+  indexLabel: "{label} {y}",
+  dataPoints: [
+    {y: 3, label: "Job Seeker"},
+    {y: 18, label: "Sitting"},
+    {y: 59, label: "Loitering"},
+    {y: 47, label: "Sleeping"},
+
+  ]
+}]
+});
+chart.render();
+
+}
+</script>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     </div>
     <div class="search">
 
-    </div>
-    <footer>
-      <div class="row footer">
-        <div class="footer">
-          <div class="four columns1">
-            <h5>Contact</h5>
-            <p>info@hsquared.com</p>
+        <h1>Search</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+          quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
+          dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+        <select class="" name="">
+          <option value="">Age</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <select class="" name="">
+          <option value="">Gender</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <select class="" name="">
+          <option value="">Race</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <select class="" name="">
+          <option value="">Area</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <select class="" name="">
+          <option value="">Doing</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <button type="button" name="button">Search</button>
+      </div>
+
+
+
+
+
+    <div class="contact">
+      <h1>Contact us  </h1>
+
+      <form>
+        <div class="row">
+          <div class="six columns">
+            <label for="exampleEmailInput">Your email</label>
+            <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
           </div>
-          <div class="four columns2">
-            <h5>Call</h5>
-            <p>T: 021-123-4567</p>
-            <p>F: 021-123-4568</p>
-          </div>
-          <div class="four columns3">
-            <h5>Location</h5>
+          <div class="six columns">
+            <label for="exampleRecipientInput">Reason for contacting</label>
+            <select class="u-full-width" id="exampleRecipientInput">
+            <option value="Option 1">Questions</option>
+            <option value="Option 2">Admiration</option>
+            <option value="Option 3">Can I get your number?</option>
+          </select>
           </div>
         </div>
-      </div>
-    </footer>
+        <label for="exampleMessage">Message</label>
+        <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+        <label class="example-send-yourself-copy">
+        <input type="checkbox">
+        <span class="label-body">Send a copy to yourself</span>
+      </label>
+        <input class="button-primary" type="submit" value="Submit">
+      </form>
+    </div>
+
+
   </div>
 
+</div>
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
