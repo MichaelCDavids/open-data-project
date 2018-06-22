@@ -32,4 +32,5 @@ window.addEventListener('load',function(){
 searchButton.addEventListener('click',function(){
   insertSearchDataElement.innerHTML = templateSearchedPeople({searchedPeople : factory.search(ageSelector.value,genderSelector.value,areaSelector.value,doingSelector.value)});
   insertTotalElement.innerHTML = templateTotal({total : factory.getTotal()});
+
 });
