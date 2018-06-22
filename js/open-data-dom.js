@@ -15,6 +15,11 @@ var templateSource = document.querySelector(".areaListTemplate").innerHTML;
 var templateAreaList = Handlebars.compile(templateSource);
 var insertAreaListElement = document.querySelector(".insertAreaListElement");
 
+//Template for totals
+var templateSource = document.querySelector(".totalsTemplate").innerHTML;
+var templateTotal = Handlebars.compile(templateSource);
+var insertTotalElement = document.querySelector(".insertTotalElement");
+
 //Instance of Factory function
 var factory = OpenDataFactory(people);
 
@@ -25,6 +30,6 @@ window.addEventListener('load',function(){
 
 // Event Listeners
 searchButton.addEventListener('click',function(){
-  console.log(factory.search(ageSelector.value,genderSelector.value,areaSelector.value,doingSelector.value));
-     insertSearchDataElement.innerHTML = templateSearchedPeople({searchedPeople : factory.search(ageSelector.value,genderSelector.value,areaSelector.value,doingSelector.value)});
+  insertSearchDataElement.innerHTML = templateSearchedPeople({searchedPeople : factory.search(ageSelector.value,genderSelector.value,areaSelector.value,doingSelector.value)});
+  insertTotalElement.innerHTML = templateTotal({total : factory.getTotal()});
 });

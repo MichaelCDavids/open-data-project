@@ -22,6 +22,7 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/materialize.css">
   <link rel="stylesheet" href="css/materialize.min.css">
 
@@ -34,23 +35,29 @@
 
 
 
-
   <!-- Handlebars Templates
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script type="text/x-template" class="totalsTemplate">
+    <div class="row">
+      <div class="col s12">
+        <span>The search results contains :{{total}} person(s)</span>
+      </div>
+    </div>
+  </script>
   <script type="text/x-template" class="afterSearchTemplate">
-    <h5>Search Results</h5>
           <tr>
             <th>Age</th>
             <th>Gender</th>
             <th>Group</th>
-            <th>Group Size</th>
+            <th style="width:6em">Group Size</th>
             <th>Area</th>
             <th>Street</th>
             <th>location</th>
           </tr>
     {{#each searchedPeople}}
           <tr>
-            <td>{{age}}</td>
+            <td style="width:5em">{{age}}</td>
             <td>{{gender}}</td>
             <td>{{group}}</td>
             <td>{{groupSize}}</td>
@@ -135,11 +142,8 @@
 
     <div class="row" style="margin-top:15%;">
 
-      <h2>Search</h2>
-      <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
-        quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-        dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. -->
-      </p>
+      <h4 style="margin-bottom:2em;">Get Detailed Information</h4>
+
       <select class="age col s2 browser-default" name="age">
         <option value="">Age</option>
         <option value="<18">Under 18</option>
@@ -169,9 +173,12 @@
       </select>
       <button id="search-button" type="button" name="search" >Search</button>
     </div>
-    <div class="row search-results" style="margin: 5% 5%;">
-      <div class="twelve columns ">
-        <table class="insertSearchDataElement">
+    <div class="row search-results" style="margin: 5% 5%; height:300px; overflow: scroll;scroll-behavior: smooth;">
+      <div class="col s12">
+        <div class="insertTotalElement">
+
+        </div>
+        <table class="insertSearchDataElement peopleData">
 
         </table>
       </div>
@@ -179,7 +186,7 @@
 
 
 
-    <div class="contact"style="margin-top:15%;">
+    <div class="contact"style="margin-top:15%;margin-bottom:5em;">
       <h1>Get In Touch</h1>
       <form>
         <div class="row">
@@ -197,7 +204,7 @@
           </div>
         </div>
         <label for="exampleMessage">Message</label>
-        <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+        <textarea class="u-full-width" placeholder="Tell us what issues you might have" id="exampleMessage"></textarea>
         <label class="example-send-yourself-copy">
           <input type="checkbox">
           <span class="label-body">Send a copy to yourself</span>
